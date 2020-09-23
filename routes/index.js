@@ -1,7 +1,6 @@
 const express = require('express');
-const config = require('../manifest');
+const config = require('../config');
 const PosterApi = require('../api/poster');
-
 const router = new express.Router();
 
 
@@ -13,6 +12,7 @@ router.get('/', async (req, res) => {
     const products = await posterApi.makePosterRequest('menu.getProducts');
 
     res.render('products', { products: products })
+    console.log(products)
 });
 
 
@@ -23,7 +23,7 @@ router.post('/buy', async (req, res) => {
     const order = await posterApi.makePosterRequest('incomingOrders.createIncomingOrder', 'post', {
         body: {
             spot_id: 1,
-            phone: '+380680000000',
+            phone: '+79610457403',
             products: [
                 { product_id: productId, count: 1 },
             ],

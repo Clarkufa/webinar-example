@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Айбат тест</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,14 +23,14 @@
             <form class="card" style="margin-bottom: 30px" action="/buy" method="post">
                 <input type="hidden" name="productId" value="<%= product.product_id %>">
                 <img
-                        src="http://ivanchenko.joinposter.com<%= product.photo_origin %>"
+                        src="http://aibat-hallyar.joinposter.com<%= product.photo_origin %>"
                         class="card-img-top"
                         style="height: 150px; object-fit: cover"
                 >
                 <div class="card-body">
                     <h5 class="card-title"><%= product.product_name %></h5>
-                    <p class="card-text"><%= product.price ? product.price['1'] + ' UAH ' : '' %></p>
-                    <button type="submit" class="btn btn-primary">Buy</button>
+                    <p class="card-text"><%= product.price ? product.price['1'] + ' ₽ ' : '' %></p>
+                    <button type="submit" class="btn btn-primary">Хочу</button>
                 </div>
             </form>
         </div>

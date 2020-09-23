@@ -129,7 +129,7 @@ export default class LoyaltyApp extends React.Component {
 
                         <label htmlFor="bonus">Списать</label>
                         <input
-                            type="text" placeholder="10.99 грн" id="bonus" className="form-control"
+                            type="text" placeholder="10.99 ₽" id="bonus" className="form-control"
                             defaultValue={bonus} onChange={(e) => this.setState({ bonus: e.target.value })}
                         />
 
