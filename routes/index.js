@@ -5,14 +5,14 @@ const router = new express.Router();
 
 
 router.get('/', async (req, res) => {
-    console.log(config);
+
 
     const posterApi = new PosterApi({ token: config.token });
 
     const products = await posterApi.makePosterRequest('menu.getProducts');
 
     res.render('products', { products: products })
-    console.log(products)
+
 });
 
 
